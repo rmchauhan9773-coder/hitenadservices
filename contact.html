@@ -1,5 +1,136 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact | Growth Hardik</title><meta name="description" content="Contact Growth Hardik for digital marketing, Meta Ads, lead generation and website services."><link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a class="logo" href="index.html">Growth <span>Hardik</span></a><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html" class="btn">Contact</a></nav></div></header>
-<section class="page-hero"><div class="container"><h1>Let's Talk</h1><p>Tell us what you want to grow.</p></div></section>
-<section><div class="container"><div class="two"><div><h2>Start a conversation.</h2><p>For Meta Ads, lead generation, website development or digital marketing strategy, send your requirements and we'll get back to you.</p><p><strong>Email:</strong> growthhardik@gmail.com</p><p><strong>Location:</strong> Morbi, Gujarat, India</p></div><form class="form" action="mailto:growthhardik@gmail.com" method="post" enctype="text/plain"><div class="field"><label>Name</label><input name="name" required></div><div class="field"><label>Email</label><input type="email" name="email" required></div><div class="field"><label>Phone</label><input name="phone"></div><div class="field"><label>Message</label><textarea name="message" required></textarea></div><button class="btn" type="submit">Send Enquiry</button></form></div></div></section>
-<footer><div class="container footer-grid"><div><strong>Growth Hardik</strong><br><span>Performance Marketing & Digital Growth</span></div><div><a href="privacy-policy.html">Privacy Policy</a><a href="contact.html">Contact</a></div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Growth Hardik</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Growth Hardik</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- Contact Section -->
+  <main>
+
+    <section class="contact-section">
+
+      <h1>Let's Grow Together</h1>
+
+      <p>
+        Have a project, business idea, or marketing requirement?
+        Tell us about it and let's discuss how we can help your business grow.
+      </p>
+
+
+      <!-- Contact Form -->
+      <form onsubmit="sendToWhatsApp(); return false;">
+
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name"
+          required
+        >
+
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        >
+
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Enter your phone number"
+          required
+        >
+
+
+        <label for="service">Service Required</label>
+        <select id="service" required>
+          <option value="">Select a service</option>
+          <option value="Meta Ads">Meta Ads</option>
+          <option value="Lead Generation">Lead Generation</option>
+          <option value="Website Development">Website Development</option>
+          <option value="Digital Marketing">Digital Marketing</option>
+          <option value="Other">Other</option>
+        </select>
+
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="Tell us about your requirement"
+          required
+        ></textarea>
+
+
+        <button type="submit">
+          Send Inquiry on WhatsApp
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Growth Hardik. All rights reserved.</p>
+  </footer>
+
+
+  <!-- WhatsApp Script -->
+  <script>
+    function sendToWhatsApp() {
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const service = document.getElementById("service").value;
+      const message = document.getElementById("message").value;
+
+
+      const whatsappMessage =
+        "Hello Growth Hardik,%0A%0A" +
+        "*New Website Inquiry*%0A%0A" +
+        "*Name:* " + encodeURIComponent(name) + "%0A" +
+        "*Email:* " + encodeURIComponent(email) + "%0A" +
+        "*Phone:* " + encodeURIComponent(phone) + "%0A" +
+        "*Service:* " + encodeURIComponent(service) + "%0A" +
+        "*Message:* " + encodeURIComponent(message);
+
+
+      const whatsappURL =
+        "https://wa.me/919737976164?text=" + whatsappMessage;
+
+
+      window.open(whatsappURL, "_blank");
+    }
+  </script>
+
+</body>
+</html>
