@@ -1,109 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Growth Hardik</title>
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Growth Hardik</title>
+  <meta name="description" content="Contact Growth Hardik for digital marketing, Meta Ads, lead generation and website solutions.">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Header -->
   <header>
-    <div class="logo">Growth Hardik</div>
+    <div class="container nav">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <a class="logo" href="index.html">
+        Growth <span>Hardik</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html" class="btn">Contact</a>
+      </nav>
+
+    </div>
   </header>
 
 
-  <!-- Contact Section -->
-  <main>
-
-    <section class="contact-section">
-
+  <section class="page-hero">
+    <div class="container">
       <h1>Let's Grow Together</h1>
-
       <p>
-        Have a project, business idea, or marketing requirement?
-        Tell us about it and let's discuss how we can help your business grow.
+        Have a project or marketing requirement?
+        Tell us about your business and let's discuss how we can help.
       </p>
+    </div>
+  </section>
 
 
-      <!-- Contact Form -->
-      <form onsubmit="sendToWhatsApp(); return false;">
+  <section>
+    <div class="container">
 
-        <label for="name">Your Name</label>
-        <input
-          type="text"
-          id="name"
-          placeholder="Enter your name"
-          required
-        >
-
-
-        <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-        >
+      <div class="section-head">
+        <h2>Start a Conversation</h2>
+        <p>
+          Fill in your details and send your inquiry directly to WhatsApp.
+        </p>
+      </div>
 
 
-        <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          placeholder="Enter your phone number"
-          required
-        >
+      <form class="form" onsubmit="sendToWhatsApp(); return false;">
+
+        <div class="field">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required>
+        </div>
 
 
-        <label for="service">Service Required</label>
-        <select id="service" required>
-          <option value="">Select a service</option>
-          <option value="Meta Ads">Meta Ads</option>
-          <option value="Lead Generation">Lead Generation</option>
-          <option value="Website Development">Website Development</option>
-          <option value="Digital Marketing">Digital Marketing</option>
-          <option value="Other">Other</option>
-        </select>
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required>
+        </div>
 
 
-        <label for="message">Your Message</label>
-        <textarea
-          id="message"
-          rows="5"
-          placeholder="Tell us about your requirement"
-          required
-        ></textarea>
+        <div class="field">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone number"
+            required>
+        </div>
 
 
-        <button type="submit">
+        <div class="field">
+          <label for="service">Service Required</label>
+
+          <select
+            id="service"
+            style="width:100%;padding:13px 14px;border:1px solid #d8e0ea;border-radius:9px;font:inherit;"
+            required>
+
+            <option value="">Select a service</option>
+            <option value="Meta Ads">Meta Ads</option>
+            <option value="Lead Generation">Lead Generation</option>
+            <option value="Website Development">Website Development</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Other">Other</option>
+
+          </select>
+        </div>
+
+
+        <div class="field">
+          <label for="message">Your Message</label>
+
+          <textarea
+            id="message"
+            placeholder="Tell us about your requirement"
+            required></textarea>
+        </div>
+
+
+        <button type="submit" class="btn">
           Send Inquiry on WhatsApp
         </button>
 
       </form>
 
-    </section>
+    </div>
+  </section>
 
-  </main>
 
-
-  <!-- Footer -->
   <footer>
-    <p>© 2026 Growth Hardik. All rights reserved.</p>
+    <div class="container footer-grid">
+
+      <div>
+        <strong>Growth Hardik</strong><br>
+        <span>Performance Marketing & Digital Growth</span>
+      </div>
+
+      <div>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
   </footer>
 
 
-  <!-- WhatsApp Script -->
   <script>
     function sendToWhatsApp() {
 
@@ -112,7 +147,6 @@
       const phone = document.getElementById("phone").value;
       const service = document.getElementById("service").value;
       const message = document.getElementById("message").value;
-
 
       const whatsappMessage =
         "Hello Growth Hardik,%0A%0A" +
@@ -123,10 +157,8 @@
         "*Service:* " + encodeURIComponent(service) + "%0A" +
         "*Message:* " + encodeURIComponent(message);
 
-
       const whatsappURL =
         "https://wa.me/919737976164?text=" + whatsappMessage;
-
 
       window.open(whatsappURL, "_blank");
     }
