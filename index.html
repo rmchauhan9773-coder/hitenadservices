@@ -1,44 +1,1093 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Growth Hardik | Digital Marketing & Website Learning</title><meta name="description" content="Practical beginner-friendly guides on digital marketing, social media advertising, SEO, websites and online business growth.">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Growth Hardik | Digital Marketing, SEO & Online Business Guides</title>
+
+<meta name="description" content="Explore digital marketing, Facebook and Instagram advertising, SEO, website development and online business guides with Growth Hardik.">
+
+<meta name="keywords" content="Digital Marketing, Meta Ads, SEO, Website Development, Blogging, Online Business">
+
+<meta name="author" content="Growth Hardik">
+<meta name="robots" content="index, follow">
+
 <link rel="canonical" href="https://hitenadservices.in/">
-<link rel="stylesheet" href="assets/style.css"></head><body>
 
-<header><div class="container nav">
-<a class="logo" href="index.html">Growth<span>Hardik</span></a>
-<button class="menu-btn" aria-label="Toggle navigation">Menu ☰</button>
-<nav aria-label="Main navigation">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
-</nav></div></header>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #172033;
+    background: #ffffff;
+    line-height: 1.7;
+}
+
+:root {
+    --blue: #2563eb;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --gray: #64748b;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    background: rgba(255,255,255,0.97);
+    padding: 17px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--blue);
+}
+
+.nav-btn {
+    background: var(--blue);
+    color: white !important;
+    padding: 11px 20px;
+    border-radius: 8px;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(120deg, #eff6ff, #ffffff, #eef2ff);
+    padding: 95px 7%;
+    overflow: hidden;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 17px;
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: var(--blue);
+    color: white;
+    box-shadow: 0 7px 20px rgba(37,99,235,0.2);
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    background: white;
+    color: var(--dark);
+    border: 1px solid #dbe3ef;
+}
+
+.secondary-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+/* HERO VISUAL */
+
+.dashboard {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(15,23,42,0.12);
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.dashboard-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.dashboard-top h3 {
+    font-size: 18px;
+}
+
+.live {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.chart-box {
+    background: #eff6ff;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.chart-box p {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #64748b;
+}
+
+.chart-bars {
+    height: 125px;
+    display: flex;
+    align-items: end;
+    gap: 12px;
+}
+
+.bar {
+    flex: 1;
+    background: linear-gradient(to top, #2563eb, #60a5fa);
+    border-radius: 6px 6px 0 0;
+}
+
+.bar:nth-child(1) {height: 40%;}
+.bar:nth-child(2) {height: 60%;}
+.bar:nth-child(3) {height: 48%;}
+.bar:nth-child(4) {height: 75%;}
+.bar:nth-child(5) {height: 65%;}
+.bar:nth-child(6) {height: 95%;}
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.dash-card {
+    padding: 17px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.dash-card span {
+    display: block;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.dash-card strong {
+    font-size: 18px;
+    color: #1d4ed8;
+}
+
+/* COMMON SECTION */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 85px 25px;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading span {
+    color: var(--blue);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 35px;
+    color: var(--dark);
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: var(--gray);
+}
+
+/* CATEGORY CARDS */
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+}
+
+.category-card {
+    padding: 30px 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    border-color: #93c5fd;
+    box-shadow: 0 15px 35px rgba(37,99,235,0.09);
+}
+
+.category-icon {
+    width: 55px;
+    height: 55px;
+    background: #eff6ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 13px;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.category-card a {
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* FEATURE SECTION */
+
+.feature-section {
+    background: var(--light);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.feature-visual {
+    background: linear-gradient(135deg,#1e40af,#2563eb);
+    padding: 45px;
+    border-radius: 20px;
+    color: white;
+}
+
+.feature-visual h3 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.feature-item {
+    background: rgba(255,255,255,0.12);
+    padding: 17px;
+    border-radius: 10px;
+    margin-top: 13px;
+}
+
+.feature-content h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.feature-content p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* BLOG SECTION */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.blog-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+}
+
+.blog-image {
+    height: 175px;
+    background: linear-gradient(135deg,#1e40af,#60a5fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.blog-content {
+    padding: 23px;
+}
+
+.blog-content span {
+    font-size: 11px;
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.blog-content h3 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.blog-content p {
+    color: var(--gray);
+    font-size: 13px;
+    margin-bottom: 17px;
+}
+
+.blog-content a {
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ABOUT */
+
+.about-section {
+    background: #eff6ff;
+}
+
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-box h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about-box p {
+    color: #475569;
+    margin-bottom: 18px;
+}
+
+/* CTA */
+
+.cta {
+    background: linear-gradient(120deg,#0f172a,#1e40af);
+    padding: 65px 25px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.cta h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: #dbeafe;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b1220;
+    color: #cbd5e1;
+    padding: 65px 7% 25px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+}
+
+.footer-brand h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    color: #94a3b8;
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.footer-column h3 {
+    color: white;
+    margin-bottom: 18px;
+    font-size: 16px;
+}
+
+.footer-column a {
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.footer-column a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 45px auto 0;
+    padding-top: 22px;
+    border-top: 1px solid #263244;
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+
+    .hero-container,
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+}
+
+@media(max-width:600px) {
+
+    header {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 13px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .categories,
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2,
+    .feature-content h2,
+    .about-box h2 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 60px 20px;
+    }
+
+    .dashboard {
+        padding: 20px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .cta h2 {
+        font-size: 27px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<a href="index.html" class="logo">Growth Hardik.</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html" class="nav-btn">Contact Us</a>
+</nav>
+
+</header>
 
 
-<main>
-<section class="hero"><div class="container hero-grid"><div>
-<div class="eyebrow">Learn • Apply • Improve</div>
-<h1>Understand digital marketing. Grow with practical knowledge.</h1>
-<p class="lead">Growth Hardik shares clear, practical guides on digital marketing, social media advertising, SEO and building websites. Learn the fundamentals and understand how to apply them to real projects.</p>
-<a class="btn" href="blog.html">Explore free guides</a><a class="btn secondary" href="about.html">About this website</a>
-</div><div class="hero-card"><span class="tag">Start here</span><h2 style="margin-top:15px">Build your digital skills step by step</h2><ul><li>Learn the basics before spending on ads.</li><li>Understand how websites and search work.</li><li>Use measurement to improve your decisions.</li><li>Focus on useful content and genuine value.</li></ul></div></div></section>
-<section class="section"><div class="container"><h2>Explore learning topics</h2><p class="section-intro">Browse practical explanations designed for beginners, students, freelancers and small business owners.</p><div class="grid">
-<div class="card"><div class="icon">📣</div><h3>Social Media Marketing</h3><p>Learn content planning, audience research, campaign structure and responsible advertising practices.</p></div>
-<div class="card"><div class="icon">🔎</div><h3>SEO & Search</h3><p>Understand keywords, search intent, on-page SEO, indexing and how to improve useful website content.</p></div>
-<div class="card"><div class="icon">🌐</div><h3>Websites & Blogging</h3><p>Explore website structure, essential pages, publishing workflows, speed and user experience.</p></div>
-</div></div></section>
-<section class="section alt"><div class="container"><h2>Latest beginner guides</h2><p class="section-intro">Start with these introductory articles. We aim to publish original explanations and update them when processes change.</p><div class="article-list">
-<a class="article-card" href="articles/digital-marketing-basics.html"><span class="tag">Digital Marketing</span><h3>Digital Marketing: A Beginner’s Guide</h3><p>Understand the main channels, how they work together and how to choose a starting point.</p></a>
-<a class="article-card" href="articles/seo-basics.html"><span class="tag">SEO</span><h3>SEO Basics for a New Website</h3><p>Learn the foundations of discoverability, helpful pages and technical setup.</p></a>
-<a class="article-card" href="articles/facebook-ads-planning.html"><span class="tag">Advertising</span><h3>How to Plan a Facebook Ads Campaign</h3><p>Set a clear goal, prepare a useful offer and measure results responsibly.</p></a>
-<a class="article-card" href="articles/website-essential-pages.html"><span class="tag">Websites</span><h3>Essential Pages Every Business Website Needs</h3><p>Plan navigation, trust information and a clear way for visitors to contact you.</p></a>
-</div><p style="margin-top:24px"><a class="btn" href="blog.html">View all articles</a></p></div></section>
-<section class="section"><div class="container grid two"><div><h2>Our approach</h2><p class="section-intro">Useful learning comes from clear explanations, realistic examples and consistent practice. We avoid promising guaranteed income, guaranteed rankings or guaranteed advertising results.</p></div><div class="card"><h3>Have a question?</h3><p>Send a message about a topic, correction or website enquiry. We welcome thoughtful feedback.</p><a class="btn" href="contact.html">Contact us</a></div></div></section>
-</main>
+<!-- HERO -->
 
-<footer><div class="container">
+<section class="hero">
+
+<div class="hero-container">
+
+<div>
+
+<span class="badge">WELCOME TO GROWTH HARDIK</span>
+
+<h1>
+Learn Digital Skills.<br>
+Understand <span>Online Growth.</span>
+</h1>
+
+<p>
+Explore practical guides on digital marketing, SEO, Meta advertising,
+website development and online business. Build your digital knowledge
+with easy-to-understand educational resources.
+</p>
+
+<div class="hero-buttons">
+
+<a href="blog.html" class="btn primary-btn">
+Explore Articles →
+</a>
+
+<a href="about.html" class="btn secondary-btn">
+Know About Us
+</a>
+
+</div>
+
+</div>
+
+
+<!-- DASHBOARD VISUAL -->
+
+<div class="dashboard">
+
+<div class="dashboard-top">
+
+<h3>Digital Growth Insights</h3>
+
+<span class="live">LEARNING</span>
+
+</div>
+
+<div class="chart-box">
+
+<p>Explore Digital Marketing Concepts</p>
+
+<div class="chart-bars">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+
+</div>
+
+<div class="dashboard-cards">
+
+<div class="dash-card">
+<span>Marketing</span>
+<strong>Strategy</strong>
+</div>
+
+<div class="dash-card">
+<span>Search</span>
+<strong>SEO</strong>
+</div>
+
+<div class="dash-card">
+<span>Web</span>
+<strong>Development</strong>
+</div>
+
+<div class="dash-card">
+<span>Business</span>
+<strong>Growth</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="container">
+
+<div class="section-heading">
+
+<span>EXPLORE TOPICS</span>
+
+<h2>Explore What You Want to Learn</h2>
+
+<p>
+Discover useful educational resources across important areas
+of the digital world.
+</p>
+
+</div>
+
+
+<div class="categories">
+
+<div class="category-card">
+
+<div class="category-icon">📱</div>
+
+<h3>Digital Marketing</h3>
+
+<p>
+Understand online marketing strategies, social media and digital promotion.
+</p>
+
+<a href="blog.html">Explore Articles →</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-icon">📊</div>
+
+<h3>Meta Advertising</h3>
+
+<p>
+Learn about Facebook Ads, Instagram campaigns and audience targeting.
+</p>
+
+<a href="blog.html">Explore Articles →</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-icon">🔍</div>
+
+<h3>SEO & Blogging</h3>
+
+<p>
+Explore keyword research, search engine optimization and content creation.
+</p>
+
+<a href="blog.html">Explore Articles →</a>
+
+</div>
+
+
+<div class="category-card">
+
+<div class="category-icon">🌐</div>
+
+<h3>Website Development</h3>
+
+<p>
+Discover website design, WordPress and website development basics.
+</p>
+
+<a href="blog.html">Explore Articles →</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEATURE -->
+
+<section class="feature-section">
+
+<div class="container">
+
+<div class="feature-grid">
+
+<div class="feature-visual">
+
+<h3>Build Your Digital Knowledge</h3>
+
+<div class="feature-item">
+✓ Understand Digital Marketing Fundamentals
+</div>
+
+<div class="feature-item">
+✓ Explore SEO and Search Strategies
+</div>
+
+<div class="feature-item">
+✓ Learn Website Development Basics
+</div>
+
+<div class="feature-item">
+✓ Discover Online Business Concepts
+</div>
+
+</div>
+
+
+<div class="feature-content">
+
+<h2>Knowledge That Helps You Grow</h2>
+
+<p>
+The digital world is continuously evolving. Learning about
+advertising platforms, search engines, websites and online tools
+can help individuals and businesses make better digital decisions.
+</p>
+
+<p>
+Growth Hardik aims to simplify these topics through informative
+articles and practical educational resources.
+</p>
+
+<a href="about.html" class="btn primary-btn">
+Discover Our Story →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LATEST BLOGS -->
+
+<section class="container">
+
+<div class="section-heading">
+
+<span>FROM OUR BLOG</span>
+
+<h2>Latest Guides & Articles</h2>
+
+<p>
+Read informative articles and discover useful insights
+about the digital industry.
+</p>
+
+</div>
+
+
+<div class="blog-grid">
+
+
+<!-- ARTICLE 1: Replace href and title with actual published article -->
+
+<div class="blog-card">
+
+<div class="blog-image">📱</div>
+
+<div class="blog-content">
+
+<span>DIGITAL MARKETING</span>
+
+<h3>Understanding Digital Marketing and Its Importance</h3>
+
+<p>
+Learn the basics of digital marketing and how businesses
+use online platforms to reach their audiences.
+</p>
+
+<a href="blog.html">Read More →</a>
+
+</div>
+
+</div>
+
+
+<div class="blog-card">
+
+<div class="blog-image">🔍</div>
+
+<div class="blog-content">
+
+<span>SEO & BLOGGING</span>
+
+<h3>Introduction to Search Engine Optimization</h3>
+
+<p>
+Understand SEO fundamentals and how search engines
+help people discover useful online content.
+</p>
+
+<a href="blog.html">Read More →</a>
+
+</div>
+
+</div>
+
+
+<div class="blog-card">
+
+<div class="blog-image">🌐</div>
+
+<div class="blog-content">
+
+<span>WEB DEVELOPMENT</span>
+
+<h3>Why Having a Website Matters for Businesses</h3>
+
+<p>
+Explore the importance of a professional website
+for building an online presence.
+</p>
+
+<a href="blog.html">Read More →</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about-section">
+
+<div class="container">
+
+<div class="about-box">
+
+<h2>About Growth Hardik</h2>
+
+<p>
+Growth Hardik is an educational platform dedicated to sharing
+knowledge about digital marketing, SEO, advertising, website
+development and online business.
+</p>
+
+<p>
+Our objective is to make digital concepts easier to understand
+through useful information, educational guides and practical insights.
+</p>
+
+<a href="about.html" class="btn primary-btn">
+Read More About Us →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT CTA -->
+
+<section class="container">
+
+<div class="cta">
+
+<h2>Have a Question or Suggestion?</h2>
+
+<p>
+We value your feedback. Get in touch with us for questions,
+suggestions or general inquiries.
+</p>
+
+<a href="contact.html" class="btn secondary-btn">
+Contact Growth Hardik →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
 <div class="footer-grid">
-<div><a class="logo" href="index.html" style="color:#fff">Growth<span>Hardik</span></a><p>Practical, beginner-friendly learning resources about digital marketing, websites, SEO and online business growth.</p></div>
-<div><h3>Explore</h3><p><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="blog.html">Blog</a><br><a href="contact.html">Contact</a></p></div>
-<div><h3>Policies</h3><p><a href="privacy.html">Privacy Policy</a><br><a href="disclaimer.html">Disclaimer</a><br><a href="terms.html">Terms &amp; Conditions</a></p></div>
-</div><div class="copyright">© <span data-year></span> Growth Hardik. All rights reserved. <span style="float:right">Made for learning and information.</span></div>
-</div></footer>
 
-<script src="assets/script.js"></script></body></html>
+<div class="footer-brand">
+
+<h2>Growth Hardik.</h2>
+
+<p>
+Your destination for informative resources on digital marketing,
+SEO, Meta advertising, website development and online business.
+We believe in learning, sharing knowledge and growing digitally.
+</p>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Quick Links</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<a href="services.html">Services</a>
+<a href="blog.html">Blog</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h3>Important Pages</h3>
+
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="terms.html">Terms & Conditions</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<p>
+© 2026 Growth Hardik. All Rights Reserved.
+</p>
+
+</div>
+
+</footer>
+
+</body>
+</html>
