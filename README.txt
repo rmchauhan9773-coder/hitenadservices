@@ -12,7 +12,7 @@ BEFORE PUBLISHING:
    If you use another domain, replace every occurrence of hitenadservices.in with your real domain.
 2. Confirm the brand name, contact email and location. Current contact email is Growthhardik@gmail.com and location is Morbi, Gujarat, India.
 3. Read every page and edit it so it accurately describes the real website, owner and services. Do not publish claims that are not true.
-4. The contact form uses a mailto link. It opens the visitor's email app and is NOT a server-side form. For a reliable form, connect a trusted form backend and update the privacy policy accordingly.
+4. The contact form prepares an inquiry message and opens WhatsApp. The visitor must review and tap Send. It is NOT a server-side form and does not store submissions in a website database.
 5. Test every link, mobile layout, contact method and page before publishing.
 6. Add only analytics/advertising scripts you actually use. Update the privacy policy and consent setup as required.
 7. Do not place AdSense code on unfinished, thin, empty or policy-incompatible pages. Publish original, helpful content and keep it maintained.
