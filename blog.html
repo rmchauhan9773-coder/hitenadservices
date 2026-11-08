@@ -71,6 +71,8 @@ nav a{font-size:12px}
 .heading h2{font-size:27px}
 .footer-grid{grid-template-columns:1fr}
 }
+
+.site-header{display:block;padding:0 7%;position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid #e2e8f0}.site-nav{max-width:1200px;min-height:72px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.site-nav .logo{display:inline-flex;align-items:center;text-decoration:none}.site-nav nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.site-nav nav a{text-decoration:none}.site-nav .menu-btn{display:none;border:1px solid #bfdbfe;background:#eff6ff;color:#1d4ed8;padding:9px 12px;border-radius:8px;font:inherit;font-weight:700;cursor:pointer}@media(max-width:760px){.site-header{padding:0 5%}.site-nav{min-height:64px;padding:9px 0}.site-nav .menu-btn{display:inline-flex}.site-nav nav{display:none;flex-basis:100%;flex-direction:column;align-items:flex-start;gap:12px;padding:0 0 14px}.site-nav.open nav{display:flex}}
 </style>
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#2563eb">
@@ -78,16 +80,7 @@ nav a{font-size:12px}
 
 <body>
 
-<header>
-<a href="index.html" class="logo">Growth Hardik.</a>
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html" class="nav-btn">Contact Us</a>
-</nav>
-</header>
+<header class="site-header"><div class="site-nav"><a class="logo" href="/index.html" aria-label="Growth Hardik home">Growth<span>Hardik</span></a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu ☰</button><nav id="primary-navigation" aria-label="Main navigation"><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></nav></div></header>
 
 <section class="hero">
 <span>GROWTH HARDIK BLOG</span>
@@ -123,7 +116,7 @@ nav a{font-size:12px}
 <span class="tag">DIGITAL MARKETING</span>
 <h3>Digital Marketing Basics: A Beginner's Guide</h3>
 <p>Understand digital marketing fundamentals, its major channels and how online marketing works.</p>
-<a href="articles/digital-marketing-basics.html">Read Article →</a>
+<a href="/articles/digital-marketing-basics.html">Read Article →</a>
 </div>
 </article>
 
@@ -133,7 +126,7 @@ nav a{font-size:12px}
 <span class="tag">SEO & BLOGGING</span>
 <h3>SEO Basics: Understanding Search Engine Optimization</h3>
 <p>Learn how SEO works and understand the fundamentals of improving website visibility.</p>
-<a href="articles/seo-basics.html">Read Article →</a>
+<a href="/articles/seo-basics.html">Read Article →</a>
 </div>
 </article>
 
@@ -143,7 +136,7 @@ nav a{font-size:12px}
 <span class="tag">META ADVERTISING</span>
 <h3>Facebook Ads Planning: A Beginner's Guide</h3>
 <p>Explore campaign objectives, audience planning and the basics of Facebook advertising.</p>
-<a href="articles/facebook-ads-planning.html">Read Article →</a>
+<a href="/articles/facebook-ads-planning.html">Read Article →</a>
 </div>
 </article>
 
@@ -153,7 +146,7 @@ nav a{font-size:12px}
 <span class="tag">WEB DEVELOPMENT</span>
 <h3>Essential Pages Every Website Should Have</h3>
 <p>Discover important website pages and understand why they matter for visitors.</p>
-<a href="articles/website-essential-pages.html">Read Article →</a>
+<a href="/articles/website-essential-pages.html">Read Article →</a>
 </div>
 </article>
 
@@ -167,7 +160,7 @@ nav a{font-size:12px}
 <div class="cta">
 <h2>Want to Learn More?</h2>
 <p>Explore our website and discover more digital knowledge.</p>
-<a href="about.html" class="btn">About Growth Hardik →</a>
+<a href="/about.html" class="btn">About Growth Hardik →</a>
 </div>
 </section>
 
@@ -181,18 +174,18 @@ nav a{font-size:12px}
 
 <div>
 <h3>Quick Links</h3>
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="services.html">Services</a>
-<a href="blog.html">Blog</a>
-<a href="contact.html">Contact</a>
+<a href="/index.html">Home</a>
+<a href="/about.html">About Us</a>
+<a href="/services.html">Services</a>
+<a href="/blog.html">Blog</a>
+<a href="/contact.html">Contact</a>
 </div>
 
 <div>
 <h3>Legal Information</h3>
-<a href="privacy.html">Privacy Policy</a>
-<a href="disclaimer.html">Disclaimer</a>
-<a href="terms.html">Terms & Conditions</a>
+<a href="/privacy.html">Privacy Policy</a>
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/terms.html">Terms & Conditions</a>
 </div>
 
 </div>
@@ -228,5 +221,6 @@ document.getElementById("noResult").style.display = count ? "none" : "block";
 document.getElementById("searchInput").addEventListener("input",searchArticles);
 </script>
 
+<script src="/assets/script.js" defer></script>
 </body>
 </html>
