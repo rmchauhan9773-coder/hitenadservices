@@ -124,7 +124,7 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <textarea id="details" name="message" minlength="10" maxlength="1500" placeholder="What is your business? What results or services are you looking for?" required></textarea>
 
 <button type="submit">Continue to WhatsApp &amp; Send Inquiry</button>
-<p class="note" id="formStatus" role="status" aria-live="polite">By submitting, WhatsApp will open with your inquiry details. Review the message and tap Send in WhatsApp. All fields are required. WhatsApp opens with a prepared message; you must tap Send. No server-side form submission is used.</p>
+<p class="note" id="formStatus" role="status" aria-live="polite">All fields are required. WhatsApp opens with a prepared message; review it and tap Send. This form does not submit to a server or database.</p>
 
 </form>
 </section>
@@ -157,7 +157,7 @@ document.getElementById("inquiryForm").addEventListener("submit", function (even
   const details = document.getElementById("details").value.trim();
   if (!form.checkValidity()) { form.reportValidity(); status.textContent = "Please check the highlighted fields and try again."; return; }
   if (!/^[0-9]{10}$/.test(phone)) { status.textContent = "Please enter a valid 10-digit mobile number."; document.getElementById("phone").focus(); return; }
-  if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) { status.textContent = "Please enter a valid email address."; document.getElementById("email").focus(); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { status.textContent = "Please enter a valid email address."; document.getElementById("email").focus(); return; }
   if (business.length < 2) { status.textContent = "Please enter your business or company name."; document.getElementById("business").focus(); return; }
   if (!budget) { status.textContent = "Please select a monthly advertising budget, or choose Not Decided Yet."; document.getElementById("budget").focus(); return; }
   if (name.length < 2 || details.length < 10) { status.textContent = "Please enter your name and at least 10 characters about your requirements."; return; }
