@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Growth Hardik</title>
-<meta name="description" content="Contact GrowthHardik for digital marketing, Facebook and Instagram ads, lead generation, SEO and website development services.">
+<title>Contact Growth Hardik | Digital Marketing & Website Services</title>
+<meta name="description" content="Contact Growth Hardik about Meta Ads, lead generation, campaign management or website development. Send your project details through WhatsApp.">
 <link rel="canonical" href="https://hitenadservices.in/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Growth Hardik">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Contact Growth Hardik | Digital Marketing & Website Services">
+<meta property="og:description" content="Contact Growth Hardik about Meta Ads, lead generation, campaign management or website development. Send your project details through WhatsApp.">
+<meta property="og:url" content="https://hitenadservices.in/contact.html">
+<meta name="twitter:card" content="summary">
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -16,13 +23,13 @@ nav a{margin:0 9px;text-decoration:none;color:#27364a;font-weight:600;font-size:
 .hero{text-align:center;padding:55px 20px 35px;background:linear-gradient(120deg,#e8f2ff,#f8fbff)}
 .hero h1{font-size:36px;color:#123d72;margin-bottom:10px}
 .hero p{color:#53647a;max-width:650px;margin:auto}
-.container{max-width:1050px;margin:35px auto;padding:0 18px;display:grid;grid-template-columns:1fr 1.5fr;gap:25px}
+.container{max-width:1050px;margin:35px auto;padding:0 18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:25px}
 .info,.form-box{background:#fff;padding:30px;border-radius:15px;box-shadow:0 5px 25px #18385c12}
 h2{color:#173e70;margin-bottom:15px}
 .info p{margin-bottom:16px;color:#566579}
 .info a{color:#1769d2;text-decoration:none;font-weight:600}
 label{display:block;font-weight:600;margin:13px 0 6px;color:#29384c}
-input,select,textarea{width:100%;padding:13px;border:1px solid #d6dfeb;border-radius:8px;font-size:15px;background:#fff}
+input,select,textarea{min-width:0;width:100%;padding:13px;border:1px solid #d6dfeb;border-radius:8px;font-size:15px;background:#fff}
 input:focus,select:focus,textarea:focus{outline:2px solid #b8d5ff;border-color:#1769d2}
 textarea{min-height:110px;resize:vertical}
 button{width:100%;margin-top:20px;background:#159447;color:#fff;border:0;padding:15px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer}
@@ -32,8 +39,10 @@ button:hover{background:#107b39}
 .note{font-size:13px;color:#738197;margin-top:10px}
 footer{text-align:center;padding:25px;background:#102b4d;color:#fff;margin-top:40px}
 footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
-@media(max-width:750px){.container{grid-template-columns:1fr}.hero h1{font-size:29px}header{justify-content:center}nav{text-align:center;line-height:2.2}}
+@media(max-width:750px){.container{grid-template-columns:minmax(0,1fr);margin:25px auto}.info,.form-box{padding:22px}.hero h1{font-size:29px}header{justify-content:center}nav{text-align:center;line-height:2.2}}
 </style>
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="theme-color" content="#2563eb">
 </head>
 
 <body>
@@ -82,10 +91,11 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <form id="inquiryForm">
 
 <label for="name">Full Name *</label>
-<input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required>
+<input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" minlength="2" maxlength="80" required>
 
 <label for="phone">Mobile / WhatsApp Number *</label>
-<input type="tel" id="phone" name="phone" autocomplete="tel-national" inputmode="numeric" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+<input type="tel" id="phone" name="phone" autocomplete="tel-national" inputmode="numeric" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" minlength="10" maxlength="10" aria-describedby="phoneHelp" required>
+<small id="phoneHelp" class="note">Enter 10 digits without spaces or country code.</small>
 
 <label for="email">Email Address</label>
 <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address">
@@ -118,10 +128,10 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 </select>
 
 <label for="details">Tell Us About Your Requirements *</label>
-<textarea id="details" name="message" placeholder="What is your business? What results or services are you looking for?" required></textarea>
+<textarea id="details" name="message" minlength="10" maxlength="1500" placeholder="What is your business? What results or services are you looking for?" required></textarea>
 
 <button type="submit">Continue to WhatsApp &amp; Send Inquiry</button>
-<p class="note">By submitting, WhatsApp will open with your inquiry details. You can review and send the message yourself.</p>
+<p class="note" id="formStatus" role="status" aria-live="polite">By submitting, WhatsApp will open with your inquiry details. Review the message and tap Send in WhatsApp. This form does not send automatically.</p>
 
 </form>
 </section>
@@ -143,7 +153,8 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <script>
 document.getElementById("inquiryForm").addEventListener("submit", function (event) {
   event.preventDefault();
-
+  const form = event.currentTarget;
+  const status = document.getElementById("formStatus");
   const name = document.getElementById("name").value.trim();
   const phone = document.getElementById("phone").value.trim();
   const email = document.getElementById("email").value.trim();
@@ -151,33 +162,14 @@ document.getElementById("inquiryForm").addEventListener("submit", function (even
   const service = document.getElementById("service").value;
   const budget = document.getElementById("budget").value;
   const details = document.getElementById("details").value.trim();
-
-  if (!/^[0-9]{10}$/.test(phone)) {
-    alert("Please enter a valid 10-digit mobile number.");
-    document.getElementById("phone").focus();
-    return;
-  }
-
-  const message = [
-    "Hello Growth Hardik, I would like to inquire about your services.",
-    "",
-    "NEW SERVICE INQUIRY",
-    "Name: " + name,
-    "Mobile: " + phone,
-    "Email: " + (email || "Not provided"),
-    "Business: " + (business || "Not provided"),
-    "Required service: " + service,
-    "Monthly budget: " + (budget || "Not decided"),
-    "Requirements: " + details
-  ].join("\n");
-
+  if (!form.checkValidity()) { form.reportValidity(); status.textContent = "Please check the highlighted fields and try again."; return; }
+  if (!/^[0-9]{10}$/.test(phone)) { status.textContent = "Please enter a valid 10-digit mobile number."; document.getElementById("phone").focus(); return; }
+  if (name.length < 2 || details.length < 10) { status.textContent = "Please enter your name and at least 10 characters about your requirements."; return; }
+  const message = ["Hello Growth Hardik, I would like to inquire about your services.","","NEW SERVICE INQUIRY","Name: " + name,"Mobile: " + phone,"Email: " + (email || "Not provided"),"Business: " + (business || "Not provided"),"Required service: " + service,"Monthly budget: " + (budget || "Not decided"),"Requirements: " + details].join("\n");
   const whatsappUrl = "https://wa.me/919737976164?text=" + encodeURIComponent(message);
-  const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-
-  // If the browser blocks a new tab, continue in the current tab instead.
-  if (!whatsappWindow) {
-    window.location.href = whatsappUrl;
-  }
+  status.textContent = "Opening WhatsApp. Please review your details and tap Send to submit the inquiry.";
+  try { const whatsappWindow = window.open(whatsappUrl, "_blank"); if (!whatsappWindow) window.location.assign(whatsappUrl); }
+  catch (error) { status.textContent = "WhatsApp could not be opened in a new tab. Redirecting you now."; window.location.assign(whatsappUrl); }
 });
 </script>
 
