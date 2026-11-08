@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | GrowthHardik</title>
+<title>Contact Us | Growth Hardik</title>
 <meta name="description" content="Contact GrowthHardik for digital marketing, Facebook and Instagram ads, lead generation, SEO and website development services.">
 <link rel="canonical" href="https://hitenadservices.in/contact.html">
 
@@ -27,6 +27,8 @@ input:focus,select:focus,textarea:focus{outline:2px solid #b8d5ff;border-color:#
 textarea{min-height:110px;resize:vertical}
 button{width:100%;margin-top:20px;background:#159447;color:#fff;border:0;padding:15px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer}
 button:hover{background:#107b39}
+.whatsapp-button{display:inline-block;background:#159447;color:#fff;text-decoration:none;padding:11px 16px;border-radius:8px;font-weight:700;margin-top:4px}
+.whatsapp-button:hover{background:#107b39}
 .note{font-size:13px;color:#738197;margin-top:10px}
 footer{text-align:center;padding:25px;background:#102b4d;color:#fff;margin-top:40px}
 footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
@@ -37,7 +39,7 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <body>
 
 <header>
-<div class="logo">GrowthHardik</div>
+<div class="logo">Growth Hardik</div>
 <nav>
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
@@ -61,7 +63,8 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <p><strong>Brand:</strong><br>GrowthHardik</p>
 <p><strong>Email:</strong><br><a href="mailto:Growthhardik@gmail.com">Growthhardik@gmail.com</a></p>
 <p><strong>Location:</strong><br>Morbi, Gujarat, India</p>
-<p><strong>WhatsApp:</strong><br><a href="https://wa.me/919737976164" target="_blank" rel="noopener">+91 97379 76164</a></p>
+<p><strong>WhatsApp:</strong><br><a href="https://wa.me/919737976164" target="_blank" rel="noopener noreferrer">+91 97379 76164</a></p>
+<a class="whatsapp-button" href="https://wa.me/919737976164?text=Hello%20Growth%20Hardik%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
 
 <h2 style="margin-top:25px">Our Services</h2>
 <p>• Facebook & Instagram Ads</p>
@@ -79,19 +82,19 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 <form id="inquiryForm">
 
 <label for="name">Full Name *</label>
-<input type="text" id="name" placeholder="Enter your full name" required>
+<input type="text" id="name" name="name" autocomplete="name" placeholder="Enter your full name" required>
 
 <label for="phone">Mobile / WhatsApp Number *</label>
-<input type="tel" id="phone" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
+<input type="tel" id="phone" name="phone" autocomplete="tel-national" inputmode="numeric" placeholder="Enter your 10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required>
 
 <label for="email">Email Address</label>
-<input type="email" id="email" placeholder="Enter your email address">
+<input type="email" id="email" name="email" autocomplete="email" placeholder="Enter your email address">
 
 <label for="business">Business / Company Name</label>
-<input type="text" id="business" placeholder="Enter your business name">
+<input type="text" id="business" name="business" autocomplete="organization" placeholder="Enter your business name">
 
 <label for="service">Which service do you need? *</label>
-<select id="service" required>
+<select id="service" name="service" required>
 <option value="">Select a service</option>
 <option>Facebook & Instagram Ads Setup</option>
 <option>Monthly Ads Management</option>
@@ -104,7 +107,7 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 </select>
 
 <label for="budget">Approximate Monthly Budget</label>
-<select id="budget">
+<select id="budget" name="budget">
 <option value="">Select your budget</option>
 <option>Below ₹5,000</option>
 <option>₹5,000 – ₹10,000</option>
@@ -115,9 +118,9 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 </select>
 
 <label for="details">Tell Us About Your Requirements *</label>
-<textarea id="details" placeholder="What is your business? What results or services are you looking for?" required></textarea>
+<textarea id="details" name="message" placeholder="What is your business? What results or services are you looking for?" required></textarea>
 
-<button type="submit">Submit Inquiry on WhatsApp</button>
+<button type="submit">Continue to WhatsApp &amp; Send Inquiry</button>
 <p class="note">By submitting, WhatsApp will open with your inquiry details. You can review and send the message yourself.</p>
 
 </form>
@@ -138,34 +141,43 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 </footer>
 
 <script>
-document.getElementById("inquiryForm").addEventListener("submit",function(e){
-e.preventDefault();
+document.getElementById("inquiryForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-const name=document.getElementById("name").value.trim();
-const phone=document.getElementById("phone").value.trim();
-const email=document.getElementById("email").value.trim();
-const business=document.getElementById("business").value.trim();
-const service=document.getElementById("service").value;
-const budget=document.getElementById("budget").value;
-const details=document.getElementById("details").value.trim();
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const business = document.getElementById("business").value.trim();
+  const service = document.getElementById("service").value;
+  const budget = document.getElementById("budget").value;
+  const details = document.getElementById("details").value.trim();
 
-if(!/^[0-9]{10}$/.test(phone)){
-alert("Please enter a valid 10-digit mobile number.");
-return;
-}
+  if (!/^[0-9]{10}$/.test(phone)) {
+    alert("Please enter a valid 10-digit mobile number.");
+    document.getElementById("phone").focus();
+    return;
+  }
 
-const message=
-"Hello GrowthHardik, I want to inquire about your services.%0A%0A"+
-"*New Service Inquiry*%0A"+
-"*Name:* "+encodeURIComponent(name)+"%0A"+
-"*Mobile:* "+encodeURIComponent(phone)+"%0A"+
-"*Email:* "+encodeURIComponent(email || "Not provided")+"%0A"+
-"*Business:* "+encodeURIComponent(business || "Not provided")+"%0A"+
-"*Required Service:* "+encodeURIComponent(service)+"%0A"+
-"*Monthly Budget:* "+encodeURIComponent(budget || "Not decided")+"%0A"+
-"*Requirements:* "+encodeURIComponent(details);
+  const message = [
+    "Hello Growth Hardik, I would like to inquire about your services.",
+    "",
+    "NEW SERVICE INQUIRY",
+    "Name: " + name,
+    "Mobile: " + phone,
+    "Email: " + (email || "Not provided"),
+    "Business: " + (business || "Not provided"),
+    "Required service: " + service,
+    "Monthly budget: " + (budget || "Not decided"),
+    "Requirements: " + details
+  ].join("\n");
 
-window.open("https://wa.me/919737976164?text="+message,"_blank");
+  const whatsappUrl = "https://wa.me/919737976164?text=" + encodeURIComponent(message);
+  const whatsappWindow = window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
+  // If the browser blocks a new tab, continue in the current tab instead.
+  if (!whatsappWindow) {
+    window.location.href = whatsappUrl;
+  }
 });
 </script>
 
