@@ -303,6 +303,19 @@ footer p {
 /* Consistent Growth Hardik brand logo: black + blue, matching Services page */
 .logo{color:#172033!important;text-decoration:none}
 .logo span{color:#2164d8!important}
+
+/* Author profile */
+.author-section{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:32px;box-shadow:0 8px 28px rgba(15,23,42,.05)}
+.author-photo-wrap{width:100%;max-width:280px;margin:auto}
+.author-photo{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 35%;border-radius:18px;border:5px solid #eff6ff}
+.author-label{display:inline-block;color:#2164d8;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
+.author-copy h2{font-size:30px;color:#102b50;margin-bottom:5px}
+.author-role{color:#2164d8;font-weight:700;margin-bottom:14px}
+.author-copy p{color:#64748b;margin:0 0 12px;font-size:15px}
+.author-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}
+.author-tags span{background:#eff6ff;color:#1d4ed8;border:1px solid #dbeafe;padding:6px 11px;border-radius:20px;font-size:12px;font-weight:700}
+@media(max-width:768px){.author-section{grid-template-columns:1fr;padding:24px}.author-photo-wrap{max-width:230px}.author-copy{text-align:center}.author-tags{justify-content:center}.author-copy h2{font-size:26px}}
+
 </style>
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#2563eb">
@@ -378,6 +391,26 @@ footer p {
 
 </section>
 
+
+
+<!-- AUTHOR PROFILE -->
+<section class="container" aria-labelledby="author-heading">
+  <div class="author-section">
+    <div class="author-photo-wrap">
+      <img class="author-photo" src="/assets/hardik-vaghora-author.jpg" alt="Hardik Vaghora, Founder of Growth Hardik" width="600" height="600" loading="lazy">
+    </div>
+    <div class="author-copy">
+      <span class="author-label">ABOUT THE AUTHOR</span>
+      <h2 id="author-heading">Hardik Vaghora</h2>
+      <div class="author-role">Founder of Growth Hardik | Digital Marketing Specialist</div>
+      <p>Hardik Vaghora is the founder of Growth Hardik, a digital marketing service brand focused on Meta Ads setup and campaign monitoring, lead generation, and business website development.</p>
+      <p>He works on practical campaign planning, audience and creative testing, enquiry quality, and website experiences that help businesses build a stronger online presence. Through Growth Hardik, he also shares straightforward educational guides to help business owners understand digital marketing and make informed decisions.</p>
+      <div class="author-tags" aria-label="Areas of focus">
+        <span>Meta Ads</span><span>Lead Generation</span><span>Website Development</span><span>Digital Marketing</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- WHAT WE COVER -->
 
