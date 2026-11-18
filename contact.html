@@ -48,6 +48,69 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 /* Consistent Growth Hardik brand logo: black + blue, matching Services page */
 .logo{color:#172033!important;text-decoration:none}
 .logo span{color:#2164d8!important}
+
+/* Growth Hardik visual refresh: consistent blue-black system, cards and responsive conversion UI */
+:root{--gh-ink:#101b32;--gh-blue:#2164d8;--gh-blue-dark:#1749a5;--gh-soft:#f2f6fd;--gh-border:#e2e9f4}
+body{color:var(--gh-ink);-webkit-font-smoothing:antialiased}
+.site-header{box-shadow:0 5px 22px rgba(16,27,50,.055);backdrop-filter:saturate(150%);background:rgba(255,255,255,.97)}
+.site-nav .logo{font-size:1.45rem;letter-spacing:-.7px}
+.site-nav nav a{padding:9px 2px;transition:color .2s ease}
+.site-nav nav a:hover,.site-nav nav a:focus-visible{color:var(--gh-blue)}
+.site-nav nav a:last-child{background:var(--gh-blue);color:#fff;padding:10px 16px;border-radius:9px}
+.site-nav nav a:last-child:hover{background:var(--gh-blue-dark)}
+:focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
+.btn,.button,.whatsapp-button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover,.button:hover,.whatsapp-button:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(33,100,216,.16)}
+.hero{position:relative}
+.hero h1{max-width:850px}
+.hero p{line-height:1.8}
+.category-card,.blog-card,.card,.process-card,.info,.form-box,.highlight-box,.author-section{box-shadow:0 10px 30px rgba(16,27,50,.055);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.category-card:hover,.blog-card:hover,.card:hover,.process-card:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(16,27,50,.10);border-color:#bfd3f5}
+.category-card,.card,.process-card{border:1px solid var(--gh-border)}
+.category-card h3,.card h3{color:#14284a}
+.section-heading{margin-bottom:36px}
+.section-heading p,.section-intro{line-height:1.8}
+.cta{box-shadow:0 18px 38px rgba(15,40,90,.15)}
+.site-footer{margin-top:30px}
+.site-footer a{width:fit-content}
+.site-footer a:hover{text-decoration:underline}
+.gh-floating-wa{position:fixed;right:22px;bottom:22px;z-index:1200;display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:999px;background:#168b50;color:#fff!important;font:700 14px/1 Arial,sans-serif;text-decoration:none!important;box-shadow:0 10px 28px rgba(10,80,45,.25);transition:transform .2s ease,box-shadow .2s ease}
+.gh-floating-wa:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(10,80,45,.3)}
+.gh-floating-wa svg{width:19px;height:19px;fill:currentColor}
+.gh-mobile-cta{display:none}
+.gh-founder-strip{display:grid;grid-template-columns:190px 1fr;gap:28px;align-items:center;max-width:1000px;margin:0 auto;padding:30px;border:1px solid var(--gh-border);border-radius:20px;background:#fff;box-shadow:0 12px 32px rgba(16,27,50,.06)}
+.gh-founder-strip img{width:170px;height:170px;object-fit:cover;object-position:center 35%;border-radius:18px;border:5px solid #eff5ff}
+.gh-founder-strip p{color:#5b6880;margin:10px 0 16px;line-height:1.8}
+.gh-founder-strip h2{margin:0;color:#12264a}
+.gh-founder-kicker{font-size:12px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:var(--gh-blue)}
+.gh-plan-visual{background:linear-gradient(145deg,#10254a,#1e55b5);border-radius:22px;padding:26px;color:#fff;box-shadow:0 24px 50px rgba(16,37,74,.2)}
+.gh-plan-visual h3{font-size:19px;margin-bottom:7px;color:#fff}
+.gh-plan-visual>p{font-size:13px;color:#dbeafe;margin:0 0 20px}
+.gh-plan-step{display:flex;align-items:center;gap:13px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);padding:14px;border-radius:13px;margin-top:11px}
+.gh-plan-step b{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:#fff;color:#1749a5}
+.gh-plan-step span{font-size:14px;font-weight:700}
+.gh-plan-step small{display:block;color:#dbeafe;font-size:12px;font-weight:400}
+.services-grid .card{display:flex;flex-direction:column;align-items:flex-start}
+.services-grid .card .button{margin-top:auto}
+.services-grid .card ul{margin-bottom:18px}
+.process-card{border:1px solid var(--gh-border);box-shadow:0 8px 24px rgba(16,27,50,.04)}
+.author-section{border-color:var(--gh-border)}
+#inquiryForm button{border-radius:10px;box-shadow:0 8px 20px rgba(21,148,71,.16)}
+input,select,textarea{transition:border-color .2s ease,box-shadow .2s ease}
+input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(33,100,216,.11);border-color:var(--gh-blue)}
+@media(max-width:760px){
+ .site-nav nav a:last-child{padding:8px 12px}
+ .gh-founder-strip{grid-template-columns:1fr;text-align:center;padding:23px}
+ .gh-founder-strip img{margin:0 auto;width:145px;height:145px}
+ .gh-mobile-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:1100;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid #dce5f2;box-shadow:0 -8px 24px rgba(16,27,50,.09)}
+ .gh-mobile-cta a{display:block;width:100%;text-align:center;padding:13px 18px;border-radius:10px;background:var(--gh-blue);color:#fff!important;font-weight:800;text-decoration:none}
+ .gh-floating-wa{right:15px;bottom:82px;width:48px;height:48px;padding:0;justify-content:center}
+ .gh-floating-wa span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+ body{padding-bottom:66px}
+ .site-footer{margin-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
 </style>
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#2563eb">
@@ -134,6 +197,7 @@ footer a{color:#dceaff;text-decoration:none;margin:0 7px;font-size:13px}
 
 </main>
 
+<a class="gh-floating-wa" href="https://wa.me/919737976164?text=Hello%20Growth%20Hardik%2C%20I%20would%20like%20to%20discuss%20my%20business%20requirements." target="_blank" rel="noopener noreferrer" aria-label="Chat with Growth Hardik on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4ZM12.1 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4a11.2 11.2 0 0 0 4.3 3.8c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg><span>WhatsApp</span></a><div class="gh-mobile-cta"><a href="/contact.html">Discuss Your Project</a></div>
 <footer class="site-footer"><div class="site-footer-inner">
 <div class="site-footer-brand"><a class="logo" href="/index.html">Growth<span>Hardik</span></a><p>Meta Ads setup and management, lead generation, website development and practical digital marketing resources for businesses.</p></div>
 <div><h3>Explore</h3><a href="/index.html">Home</a><a href="/about.html">About</a><a href="/services.html">Services</a><a href="/blog.html">Blog</a><a href="/contact.html">Contact</a></div>
