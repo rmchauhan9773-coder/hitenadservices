@@ -379,6 +379,16 @@ input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(3
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
+
+/* Layout correction: keep the About page content centered in the viewport */
+body{overflow-x:hidden}
+.hero{width:100%;box-sizing:border-box;text-align:center}
+.hero h1,.hero p{display:block;margin-left:auto!important;margin-right:auto!important;text-align:center;max-width:min(850px,100%)}
+body>section.container{width:calc(100% - 40px)!important;max-width:1150px!important;margin-left:auto!important;margin-right:auto!important;box-sizing:border-box}
+.about-grid{width:100%;max-width:1080px;margin-left:auto;margin-right:auto;justify-items:stretch}
+.author-section{width:100%;max-width:1000px;margin-left:auto;margin-right:auto;box-sizing:border-box}
+@media(max-width:760px){body>section.container{width:calc(100% - 28px)!important;padding:42px 14px!important}.hero{padding:58px 18px!important}.hero h1{font-size:clamp(27px,7vw,36px)!important;line-height:1.2}}
+
 </style>
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#2563eb">
