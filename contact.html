@@ -111,6 +111,15 @@ input:focus,select:focus,textarea:focus{outline:none;box-shadow:0 0 0 4px rgba(3
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
+
+/* Layout correction: center the contact heading and main two-column form block */
+body{overflow-x:hidden}
+.hero{width:100%;box-sizing:border-box;text-align:center}
+.hero h1,.hero p{display:block;margin-left:auto!important;margin-right:auto!important;text-align:center;max-width:min(850px,100%)}
+main.container{display:grid!important;width:calc(100% - 40px)!important;max-width:1050px!important;margin:35px auto!important;padding:0!important;box-sizing:border-box;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);justify-content:center;align-items:start}
+main.container>.info,main.container>.form-box{min-width:0;width:100%;box-sizing:border-box}
+@media(max-width:760px){main.container{width:calc(100% - 28px)!important;margin:24px auto!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important}.hero{padding:48px 18px 30px!important}.hero h1{font-size:clamp(26px,7vw,34px)!important;line-height:1.2}}
+
 </style>
 <link rel="icon" type="image/png" href="/favicon.png">
 <meta name="theme-color" content="#2563eb">
