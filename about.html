@@ -307,7 +307,7 @@ footer p {
 /* Author profile */
 .author-section{display:grid;grid-template-columns:300px 1fr;gap:34px;align-items:center;background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:32px;box-shadow:0 8px 28px rgba(15,23,42,.05)}
 .author-photo-wrap{width:100%;max-width:280px;margin:auto}
-.author-photo{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 35%;border-radius:18px;border:5px solid #eff6ff}
+.author-photo{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center center;border-radius:18px;border:5px solid #eff6ff;background:#eff6ff}
 .author-label{display:inline-block;color:#2164d8;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:8px}
 .author-copy h2{font-size:30px;color:#102b50;margin-bottom:5px}
 .author-role{color:#2164d8;font-weight:700;margin-bottom:14px}
@@ -471,7 +471,7 @@ body>section.container{width:calc(100% - 40px)!important;max-width:1150px!import
 <section class="container" aria-labelledby="author-heading">
   <div class="author-section">
     <div class="author-photo-wrap">
-      <img class="author-photo" src="/assets/hardik-vaghora-author.PNG?v=2" alt="Hardik Vaghora, Founder of Growth Hardik" width="600" height="600" loading="lazy">
+      <img class="author-photo" src="/assets/hardik-vaghora-author.PNG" alt="Hardik Vaghora, Founder of Growth Hardik" width="600" height="600" loading="eager" decoding="async" fetchpriority="high">
     </div>
     <div class="author-copy">
       <span class="author-label">ABOUT THE AUTHOR</span>
